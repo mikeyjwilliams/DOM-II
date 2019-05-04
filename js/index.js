@@ -10,7 +10,7 @@ navLinks.forEach(navLink => {
     })
 });
 /**
- * 1. A -> mouseout
+ * 2. mouseout 
  */
 navLinks.forEach(navLink => {
     navLink.addEventListener('mouseout', event => {
@@ -18,5 +18,15 @@ navLinks.forEach(navLink => {
     });
 });
 /**
- * 
+ *  drag / drop
  */
+const contentImg = document.querySelector('.content-section img');
+const contentText = document.querySelector('.content-section .text-content');
+
+/**
+ * 3. dbclick
+ */
+const destinationImg = document.querySelector('.content-destination img');
+destinationImg.addEventListener('dblclick', event => {
+    destinationImg.classList.toggle('large');
+});
