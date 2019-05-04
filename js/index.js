@@ -1,7 +1,7 @@
 // Your code goes here
 
 /**
- * 1. mouseover
+ * 1. mouseover .. navigation
  */
 const navLinks = document.querySelectorAll('.nav-link');
 navLinks.forEach(navLink => {
@@ -10,7 +10,7 @@ navLinks.forEach(navLink => {
     })
 });
 /**
- * 2. mouseout 
+ * 2. mouseout .. navigation
  */
 navLinks.forEach(navLink => {
     navLink.addEventListener('mouseout', event => {
@@ -18,15 +18,19 @@ navLinks.forEach(navLink => {
     });
 });
 /**
- *  drag / drop
+ *  drag / drop.. in progress
  */
 const contentImg = document.querySelector('.content-section img');
 const contentText = document.querySelector('.content-section .text-content');
 
 /**
- * 3. dbclick
+ * 3. dbclick .. on destination boat.
  */
 const destinationImg = document.querySelector('.content-destination img');
 destinationImg.addEventListener('dblclick', event => {
     destinationImg.classList.toggle('large');
 });
+
+/**
+ * 4. focus .. on bus
+ */
