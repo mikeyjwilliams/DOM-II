@@ -49,3 +49,21 @@ noImgSelect.forEach(img => {
         event.preventDefault();
     });
 });
+
+/**
+ * 6. 
+ */
+
+
+
+
+
+/**
+ * navigation stopped from refreshing page.
+ */
+const navPreventDefault = document.querySelectorAll('.nav-link');
+navPreventDefault.forEach(navItem => {
+    navItem.addEventListener('click', e => {
+        e.preventDefault();
+    });
+});
