@@ -32,5 +32,20 @@ destinationImg.addEventListener('dblclick', event => {
 });
 
 /**
- * 4. focus .. on bus
+ * 4. focus .. on nav-link contact
  */
+const contactNavLink = document.querySelector('.nav-link');
+contactNavLink.addEventListener('focus', (event) => {
+    // console.log(contactNavLink);
+    event.target.style.fontSize = '2rem';
+});
+/**
+ * 5. contextmenu .preventDefault() -> disable select menu on imgs
+ */
+
+const noImgSelect = document.querySelectorAll('.img-content img');
+noImgSelect.forEach(img => {
+    img.addEventListener('contextmenu', event => {
+        event.preventDefault();
+    });
+});
