@@ -51,8 +51,17 @@ noImgSelect.forEach(img => {
 });
 
 /**
- * 6. 
+ * 6. mousedown | 
  */
+const signUpButtons = document.querySelectorAll('.destination .btn');
+const secondSignUpButton = signUpButtons[1];
+secondSignUpButton.addEventListener('mousedown', event => {
+    const destinationHeader = document.querySelectorAll('.destination h4');
+    const headerText = destinationHeader[1];
+    headerText.textContent = 'Fun Bus Get Away!';
+    console.log(headerText);
+});
+
 
 
 
