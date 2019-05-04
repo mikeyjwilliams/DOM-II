@@ -62,10 +62,51 @@ secondSignUpButton.addEventListener('mousedown', event => {
     console.log(headerText);
 });
 
+/**
+ * 7. keyup -> focuses on specific nav item by first letter of nav item.
+ *      h => home, a => about us, b => blog, c => contact
+ */
+const bodyListen = document.querySelector('body');
+bodyListen.addEventListener('keyup', event => {
+    let styling;
+    let code = event.key;
+    console.log(code);
+    console.log(event.key + ' event.key');
+    switch (code) {
+        case 'h':
+            console.log(event);
+            let styling = document.querySelector('.nav-link');
+            console.log(styling);
+            break;
+        case 'a':
+            styling = event.target;
+            console.log(event.target);
+            break;
+        default:
+            console.log('not there');
+            break;
+
+    }
+    //console.log(styling);
+    //let code = event.keyCode;
+    // let target;
+    //console.log(event.key);
+
+});
 
 
 
 
+
+/**
+ * 1. mouseover
+ * 2. mouseout
+ * 3. dbclick
+ * 4. focus
+ * 5. contextmenu
+ * 6. mousedown
+ * 7. keyup
+ */
 
 /**
  * navigation stopped from refreshing page.
