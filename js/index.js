@@ -65,33 +65,36 @@ secondSignUpButton.addEventListener('mousedown', event => {
 /**
  * 7. keyup -> focuses on specific nav item by first letter of nav item.
  *      h => home, a => about us, b => blog, c => contact
+ *  if clicked it turns the nav item into a button with tan background.
  */
 const bodyListen = document.querySelector('body');
 bodyListen.addEventListener('keyup', event => {
-    let styling;
-    let code = event.key;
-    console.log(code);
-    console.log(event.key + ' event.key');
-    switch (code) {
+    let navLink; // value for link.
+    let keyPressed = event.key; // key pressed after screen is clicked.
+    switch (keyPressed) {
         case 'h':
-            console.log(event);
-            let styling = document.querySelector('.nav-link');
-            console.log(styling);
+            navLink = document.querySelectorAll('.nav-link')[0];
             break;
         case 'a':
-            styling = event.target;
-            console.log(event.target);
+            navLink = document.querySelectorAll('.nav-link')[1];
+            break;
+        case 'b':
+            navLink = document.querySelectorAll('.nav-link')[2];
+            break;
+        case 'c':
+            navLink = document.querySelectorAll('.nav-link')[3];
             break;
         default:
             console.log('not there');
             break;
-
     }
-    //console.log(styling);
-    //let code = event.keyCode;
-    // let target;
-    //console.log(event.key);
-
+    if (!navLink.classList.contains('btn')) {
+        navLink.style.backgroundColor = '#F1D0B7';
+        navLink.classList.toggle('btn');
+    } else {
+        navLink.classList.toggle('btn');
+        navLink.style.backgroundColor = 'white';
+    }
 });
 
 
