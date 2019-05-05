@@ -59,7 +59,7 @@ secondSignUpButton.addEventListener('mousedown', event => {
     const destinationHeader = document.querySelectorAll('.destination h4');
     const headerText = destinationHeader[1];
     headerText.textContent = 'Fun Bus Get Away!';
-    console.log(headerText);
+
 });
 
 /**
@@ -97,7 +97,28 @@ bodyListen.addEventListener('keyup', event => {
     }
 });
 
+/**
+ * 8. click => fun in sun button -> hides text in p above it. then click 
+ */
+const signUp1Textaltered = document.querySelectorAll('.destination .btn')[0];
+signUp1Textaltered.textContent = 'click to change par.';
+const destinationButton = document.querySelectorAll('.destination .btn')[0];
+//console.log(destintationButton);
+destinationButton.addEventListener('click', event => {
+    let buttonText = destinationButton.textContent;
+    if (!destinationButton.classList.contains('changeWords')) {
+        destinationButton.classList.toggle('changeWords');
+        destinationButton.textContent;
+    } else {
+        destinationButton.classList.toggle('changeWords');
+        console.log('remove class');
+    }
+    const paragraphText = document.querySelectorAll('.destination p')[0];
+    //console.log(paragraphText);
+    console.log(buttonText);
 
+
+});
 
 
 
