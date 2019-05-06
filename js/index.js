@@ -134,6 +134,17 @@ letsGoImg.addEventListener('mouseleave', event => {
     }, 2000);
 }, false);
 
+/**
+ * 10. resize
+ */
+const funBusHideResize = document.querySelector('.intro img');
+window.addEventListener('resize', event => {
+    if (window.innerWidth < 500) {
+        funBusHideResize.style.display = 'none';
+    } else {
+        funBusHideResize.style.display = 'inline-block';
+    }
+});
 
 /**
  * 1. mouseover
@@ -145,6 +156,7 @@ letsGoImg.addEventListener('mouseleave', event => {
  * 7. keyup
  * 8. click
  * 9. mouseleave
+ * 10. 
  */
 
 /**
