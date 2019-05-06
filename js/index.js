@@ -67,8 +67,9 @@ secondSignUpButton.addEventListener('mousedown', event => {
  *      h => home, a => about us, b => blog, c => contact
  *  if clicked it turns the nav item into a button with tan background.
  */
-const bodyListen = document.querySelector('body');
-bodyListen.addEventListener('keyup', event => {
+//const bodyListen = document.querySelector('body');
+// on window to emulate using just the keyboard to click on specific navigation links.
+window.addEventListener('keyup', event => {
     let navLink = document.querySelector('.nav-link'); // value for link.
     let keyPressed = event.key; // key pressed after screen is clicked.
     switch (keyPressed) {
