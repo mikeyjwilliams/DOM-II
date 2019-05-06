@@ -120,6 +120,16 @@ destinationButton.addEventListener('click', event => {
     }
 });
 
+/**
+ * 9. mouseleave -> mouse red border on lets's go photo on mouse leave.
+ */
+const letsGoImg = document.querySelectorAll('.content-section .img-content img')[0];
+letsGoImg.addEventListener('mouseleave', event => {
+    event.target.style.border = '3px solid #17A2B8';
+    event.target.style.borderRadius = '10px';
+
+
+}, false);
 
 
 /**
