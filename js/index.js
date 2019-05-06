@@ -69,7 +69,7 @@ secondSignUpButton.addEventListener('mousedown', event => {
  */
 const bodyListen = document.querySelector('body');
 bodyListen.addEventListener('keyup', event => {
-    let navLink = ''; // value for link.
+    let navLink = document.querySelector('.nav-link'); // value for link.
     let keyPressed = event.key; // key pressed after screen is clicked.
     switch (keyPressed) {
         case 'h':
@@ -118,12 +118,6 @@ destinationButton.addEventListener('click', event => {
         destinationButton.textContent = 'click to show text';
         funText.classList.toggle('hideWords');
     }
-
-    // const paragraphText = document.querySelectorAll('.destination p')[0];
-    // //console.log(paragraphText);
-    // console.log(buttonText);
-
-
 });
 
 
@@ -136,6 +130,8 @@ destinationButton.addEventListener('click', event => {
  * 5. contextmenu
  * 6. mousedown
  * 7. keyup
+ * 8. click
+ * 9. mouseleave
  */
 
 /**
