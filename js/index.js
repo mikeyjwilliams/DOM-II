@@ -128,7 +128,9 @@ letsGoImg.addEventListener('mouseleave', event => {
     event.target.style.border = '3px solid #17A2B8';
     event.target.style.borderRadius = '10px';
 
-
+    setTimeout(function () {
+        event.target.style.border = '';
+    }, 2000);
 }, false);
 
 
