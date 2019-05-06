@@ -69,58 +69,60 @@ secondSignUpButton.addEventListener('mousedown', event => {
  */
 const bodyListen = document.querySelector('body');
 bodyListen.addEventListener('keyup', event => {
-    let navigationLink; // value for link.
+    let navLink = ''; // value for link.
     let keyPressed = event.key; // key pressed after screen is clicked.
     switch (keyPressed) {
         case 'h':
-            navigationLink = document.querySelectorAll('.nav-link')[0];
+            navLink = document.querySelectorAll('.nav-link')[0];
             break;
         case 'a':
-            navigationLink = document.querySelectorAll('.nav-link')[1];
+            navLink = document.querySelectorAll('.nav-link')[1];
             break;
         case 'b':
-            navigationLink = document.querySelectorAll('.nav-link')[2];
+            navLink = document.querySelectorAll('.nav-link')[2];
             break;
         case 'c':
-            navigationLink = document.querySelectorAll('.nav-link')[3];
+            navLink = document.querySelectorAll('.nav-link')[3];
             break;
         default:
             console.log('not there');
             break;
     }
-    if (!navigationLink.classList.contains('btn')) {
-        navigationLink.style.backgroundColor = '#F1D0B7';
-        navigationLink.classList.toggle('btn');
+    let nav = navLink;
+    if (!nav.classList.contains('btn')) {
+        nav.style.backgroundColor = '#F1D0B7';
+        nav.classList.toggle('btn');
     } else {
-        navigationLink.classList.toggle('btn');
-        navigationLink.style.backgroundColor = 'white';
+        nav.classList.toggle('btn');
+        nav.style.backgroundColor = 'white';
     }
 });
 
 /**
  * 8. click => fun in sun button -> hides text in p above it. then click 
+ * 
+ * 1. change the sign up button to say what it does.
+ * 2. seclet the button, 
  */
-const signUp1TextAltered = document.querySelectorAll('.destination .btn')[0];
-const hideTextInfo = 'click to hide par.';
-signUp1TextAltered.textContent = hideTextInfo;
+const funText = document.querySelectorAll('.destination p')[0];
+const btnHideTxt = 'click to hide par.';
 const destinationButton = document.querySelectorAll('.destination .btn')[0];
+destinationButton.textContent = btnHideTxt;
 //console.log(destintationButton);
 destinationButton.addEventListener('click', event => {
     let buttonText = destinationButton.textContent;
-    const parTextEl = document.querySelectorAll('.destination p')[0];
-    if (!destinationButton.classList.contains('hideWords')) {
-        parTextEl.classList.toggle('hideWords');
-        destinationButton.textContent = 'click to unhide par.';
-        //console.log('add class');
-    } else {
-        
-        parTextEl.classList.toggle('hideWords');
-
-       // console.log('remove class');
+    if (!funText.classList.contains('hideWords')) {
+        funText.classList.toggle('hideWords');
+        destinationButton.textContent = btnHideTxt;
+    } else if (funText.classList.contains('hideWords')) {
+        destinationButton.textContent = 'click to show text';
     }
+
     const paragraphText = document.querySelectorAll('.destination p')[0];
     //console.log(paragraphText);
-   // console.log(buttonText)
+    console.log(buttonText);
+
+
 });
 
 
