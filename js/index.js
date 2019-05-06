@@ -1,4 +1,18 @@
 // Your code goes here
+/**  list of listeners
+ * 
+ * 1. mouseover
+ * 2. mouseout
+ * 3. dbclick
+ * 4. focus
+ * 5. contextmenu
+ * 6. mousedown
+ * 7. keyup
+ * 8. click
+ * 9. mouseleave
+ * 10. resize
+ */
+
 
 /**
  * 1. mouseover .. navigation
@@ -17,11 +31,6 @@ navLinks.forEach(navLink => {
         event.target.style.color = 'black';
     });
 });
-/**
- *  drag / drop.. in progress
- */
-const contentImg = document.querySelector('.content-section img');
-const contentText = document.querySelector('.content-section .text-content');
 
 /**
  * 3. dbclick .. on destination boat.
@@ -145,19 +154,6 @@ window.addEventListener('resize', event => {
         funBusHideResize.style.display = 'inline-block';
     }
 });
-
-/**
- * 1. mouseover
- * 2. mouseout
- * 3. dbclick
- * 4. focus
- * 5. contextmenu
- * 6. mousedown
- * 7. keyup
- * 8. click
- * 9. mouseleave
- * 10. 
- */
 
 /**
  * navigation stopped from refreshing page.
