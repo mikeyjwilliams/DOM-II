@@ -116,11 +116,12 @@ destinationButton.addEventListener('click', event => {
         destinationButton.textContent = btnHideTxt;
     } else if (funText.classList.contains('hideWords')) {
         destinationButton.textContent = 'click to show text';
+        funText.classList.toggle('hideWords');
     }
 
-    const paragraphText = document.querySelectorAll('.destination p')[0];
-    //console.log(paragraphText);
-    console.log(buttonText);
+    // const paragraphText = document.querySelectorAll('.destination p')[0];
+    // //console.log(paragraphText);
+    // console.log(buttonText);
 
 
 });
