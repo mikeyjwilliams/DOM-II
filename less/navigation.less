@@ -4,6 +4,7 @@
   background: @main-bg;
   border-bottom: 2px dashed @navigation-border;
   position: fixed;
+  z-index: 100;
 
   .nav-container {
     height: 100%;
@@ -24,7 +25,7 @@
     }
 
     .nav {
-      width: 350px;
+      width: 500px;
       display: flex;
       justify-content: space-evenly;
 
@@ -32,13 +33,27 @@
         width: 100%;
         justify-content: space-around;
       }
-      
-      
+
+      /**
+       * add class to toggle.
+       */
+      .btn {
+        .nav-button;
+      }
+
       a {
         font-size: 1.6rem;
+        background-color: @main-bg;
         color: @font-color;
         text-decoration: none;
       }
+
+
     }
+
+    //nav-container 
   }
-} // .main-navigation
+
+}
+
+// main-navigation

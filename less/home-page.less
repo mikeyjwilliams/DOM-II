@@ -20,8 +20,8 @@
     flex-wrap: wrap;
     justify-content: space-between;
 
-   
-    
+
+
     .text-content {
       width: 48%;
       padding-right: 1%;
@@ -84,6 +84,14 @@
 
     img {
       border-radius: 10px;
+
+      transform: scale(1);
+      transform-origin: 0 0;
+      transition: transform .8s;
+    }
+
+    .large {
+      transform: scale(1.5);
     }
   }
 
@@ -105,10 +113,15 @@
         width: 80%;
         margin: 0 auto 30px;
       }
-      
+
       .btn {
-        .button-creator(200px, 45px, @button-bg, @white, 1.8rem);     
+        .button-creator(200px, 45px, @button-bg, @white, 1.8rem);
+      }
+      .hideWords {
+        visibility: hidden;
       }
     }
   }
-}// home
+}
+
+// home
