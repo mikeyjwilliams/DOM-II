@@ -34,3 +34,8 @@ body {
 .block--gray {
   background-color: gray;
 }
+img {
+  width: 100px;
+  height: 100px;
+  
+}
